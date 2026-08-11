@@ -1,0 +1,59 @@
+# ============================================================
+# EaseDocument — .gitignore
+# ============================================================
+
+# ----- Environment & Secrets --------------------------------
+# NEVER commit the real .env — it contains DB credentials
+.env
+
+# ----- Uploaded Files ---------------------------------------
+# User-uploaded files should not be in version control
+upload_clearance/*
+upload_id/*
+upload_residency/*
+upload_resident/*
+upload_resident_id/*
+
+# New unified uploads folder
+uploads/clearance/*
+uploads/id/*
+uploads/residency/*
+uploads/resident/*
+uploads/resident_id/*
+
+# Keep the folders themselves (with a .gitkeep placeholder)
+!upload_clearance/.gitkeep
+!upload_id/.gitkeep
+!upload_residency/.gitkeep
+!upload_resident/.gitkeep
+!upload_resident_id/.gitkeep
+!uploads/clearance/.gitkeep
+!uploads/id/.gitkeep
+!uploads/residency/.gitkeep
+!uploads/resident/.gitkeep
+!uploads/resident_id/.gitkeep
+
+# ----- Database Dumps ---------------------------------------
+# Optionally exclude the SQL dump if it contains sensitive data
+# *.sql
+
+# ----- OS & Editor Junk -------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PhpStorm / IntelliJ
+.idea/
+
+# ----- PHP --------------------------------------------------
+# Composer (if added later)
+/vendor/
+composer.lock
+
+# ----- Logs -------------------------------------------------
+*.log
+error_log
