@@ -358,28 +358,6 @@ All global configuration values are set inside the `.env` file at the root:
 
 ---
 
-## User Roles & Workflow
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Resident as Resident (Citizen)
-    participant Portal as EaseDocument Portal
-    actor Admin as Barangay Staff / Admin
-
-    Resident->>Portal: Registers account & uploads valid ID
-    Note over Portal,Admin: Account marked as 'Not Verified' (Pending)
-    Admin->>Portal: Reviews uploaded ID in Admin Portal
-    Admin->>Portal: Approves & Verifies Resident
-    Portal-->>Resident: Account Activated
-
-    Resident->>Portal: Submits document request (Clearance / Indigency / ID)
-    Admin->>Portal: Reviews request details & verifies requirements
-    Admin->>Portal: Marks request as 'Processing'
-    Admin->>Portal: Prints official document using template
-    Admin->>Portal: Marks request as 'Approved' / 'Released'
-    Resident->>Portal: Receives document (Pick-up / Delivery)
-```
 
 ---
 
